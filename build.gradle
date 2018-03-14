@@ -1,0 +1,29 @@
+apply plugin: 'maven-publish'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+
+
+task setProperties {
+    def profiles = [test: 'testing', dev: 'development', prod: 'production']
+    def defaultProfile = 'test'
+    def currentProfile
+
+    if (project.hasProperty('profile')) {
+        currentProfile = project.profile
+        println "Profile: ${profiles.get(currentProfile)}."
+    } else {
+        currentProfile = defaultProfile
+        println "Default profile: ${profiles.get(currentProfile)}."
+    }
+    def target = new File("src/main/resources/db.properties")
+    def source = new File("src/main/resources/${profiles.get(currentProfile)}.properties")
+    if(target.exists()) target.delete()
+    target.createNewFile()
+    target << source.text
+}
+
+

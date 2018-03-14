@@ -1,0 +1,4 @@
+database.jdbc.driverClass=test
+database.jdbc.connectionURL=test
+database.jdbc.username=test
+database.jdbc.password=test
