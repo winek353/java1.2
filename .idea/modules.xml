@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/filter.iml" filepath="$PROJECT_DIR$/.idea/modules/filter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/filter_main.iml" filepath="$PROJECT_DIR$/.idea/modules/filter_main.iml" group="filter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/filter_test.iml" filepath="$PROJECT_DIR$/.idea/modules/filter_test.iml" group="filter" />
     </modules>
   </component>
 </project>
